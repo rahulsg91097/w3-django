@@ -1,0 +1,9 @@
+{% extends "master.html" %}
+{% block title %}All members list{% endblock title %}
+{% block content %}
+    <ul>
+        {% for x in mymembers %}
+            <li><a href="details/{{ x.id }}">{{ x.firstname }} {{x.lastname}}</a></li>
+        {% endfor %}
+    </ul>
+{% endblock content %}
